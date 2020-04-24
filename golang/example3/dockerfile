@@ -1,0 +1,8 @@
+FROM mysql
+MAINTAINER CJJ <cjj9931207@gmail.com>
+RUN mkdir /app
+ADD . /app
+WORKDIR /app
+RUN mysql -u root -p 
+EXPOSE 3306
+CMD ["/app/main"]
